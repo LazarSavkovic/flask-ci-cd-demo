@@ -8,6 +8,10 @@ ITEMS = [
     {"id": 2, "name": "Tea"},
 ]
 
+@app.route("/", methods=["GET"])
+def health():
+    return "Hello There!", 200
+
 
 @app.route("/health", methods=["GET"])
 def health():
