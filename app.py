@@ -9,7 +9,7 @@ ITEMS = [
 ]
 
 @app.route("/", methods=["GET"])
-def health():
+def index():
     return "Hello There!", 200
 
 
