@@ -6,6 +6,7 @@ app = Flask(__name__)
 ITEMS = [
     {"id": 1, "name": "Coffee"},
     {"id": 2, "name": "Tea"},
+    {"id": 3, "name": "Coke"}
 ]
 
 @app.route("/", methods=["GET"])
