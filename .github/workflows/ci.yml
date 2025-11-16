@@ -42,3 +42,9 @@ jobs:
           context: .
           push: true
           tags: savkoviclazar1/flask-ci-cd-demo:latest
+
+      - name: Trigger Render deploy
+        if: github.ref == 'refs/heads/main'
+        run: curl -X POST "$RENDER_DEPLOY_HOOK"
+        env:
+          RENDER_DEPLOY_HOOK: ${{ secrets.RENDER_DEPLOY_HOOK }}
