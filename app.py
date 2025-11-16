@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, render_template
 
 app = Flask(__name__)
 
@@ -9,9 +9,9 @@ ITEMS = [
     {"id": 3, "name": "Coke"}
 ]
 
-@app.route("/", methods=["GET"])
+@app.route("/")
 def index():
-    return "Hello There!", 200
+    return render_template("index.html")
 
 
 @app.route("/health", methods=["GET"])
